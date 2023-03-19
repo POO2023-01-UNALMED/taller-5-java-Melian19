@@ -44,7 +44,7 @@ public class Animal {
 	public String getGenero() {
 		return genero;
 	}
-	public Zona[] getZona() {
+	public Zona getZona() {
 		return zona;
 	}
 	
