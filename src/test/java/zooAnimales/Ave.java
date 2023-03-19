@@ -19,8 +19,7 @@ public class Ave extends Animal {
 		listado.add(this);
 	}
 	public Ave() {
-		setTotalAnimales(getTotalAnimales()+1);
-		listado.add(this);
+		this("",0,"","","");
 	}
 	
 	//metodos get y set

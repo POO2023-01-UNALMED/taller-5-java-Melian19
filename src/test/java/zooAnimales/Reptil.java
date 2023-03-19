@@ -11,8 +11,7 @@ public class Reptil extends Animal {
 	//metodos constructores
 	
 	public Reptil() {
-		setTotalAnimales(getTotalAnimales()+1);
-		listado.add(this);
+		this("",0,"","","",0);
 	}
 	public Reptil(String name, int age, String lugar, String gen, String color, int largo) {
 		setNombre(name);

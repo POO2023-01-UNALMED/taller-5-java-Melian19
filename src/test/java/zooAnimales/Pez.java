@@ -12,8 +12,7 @@ public class Pez extends Animal{
 	//metodos constructores
 	
 	public Pez() {
-		setTotalAnimales(getTotalAnimales()+1);
-		listado.add(this);
+		this("",0,"","","",0);
 	}
 	public Pez(String name, int age, String lugar, String gen, String color, int cantidad) {
 		setNombre(name);

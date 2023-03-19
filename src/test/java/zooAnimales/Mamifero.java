@@ -12,8 +12,7 @@ public class Mamifero extends Animal {
 	//metodos constructores
 	
 	public Mamifero() {
-		setTotalAnimales(getTotalAnimales()+1);
-		listado.add(this);		
+		this("",0,"","",false,0);		
 	}
 	public Mamifero(String name, int age, String lugar, String gen, boolean Pelo, int cantidad) {
 		setNombre(name);

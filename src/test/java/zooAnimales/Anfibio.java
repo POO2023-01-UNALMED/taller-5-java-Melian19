@@ -20,8 +20,7 @@ public class Anfibio extends Animal {
 		listado.add(this);
 	}
 	public Anfibio(){
-		setTotalAnimales(getTotalAnimales()+1);
-		listado.add(this);
+		this("",0,"","","",false);
 	}
 	
 	//metodos get y set
