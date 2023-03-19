@@ -76,13 +76,9 @@ public class Animal {
 	}
 	
 	public String totalPorTipo() {
-		int Mamiferos = Mamifero.cantidadMamiferos();
-		int Aves = Ave.cantidadAves();
-		int Reptiles = Reptil.cantidadReptiles();
-		int Peces = Pez.cantidadPeces();
-		int Anfibios = Anfibio.cantidadAnfibios();
-		return "Mamiferos: " + Mamiferos + "\nAves: " + Aves + "\nReptiles: " + Reptiles + "\nPeces: " + Peces + 
-				"\nAnfibios: " + Anfibios;		
+		return "Mamiferos: " + Mamifero.cantidadMamiferos() + "\nAves: " + Ave.cantidadAves() 
+		+ "\nReptiles: " + Reptil.cantidadReptiles() + "\nPeces: " + Pez.cantidadPeces() + "\nAnfibios: " + 
+				Anfibio.cantidadAnfibios();	
 	}
 	
 	public String toString() {
