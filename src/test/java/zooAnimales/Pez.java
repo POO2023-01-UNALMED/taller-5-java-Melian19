@@ -66,14 +66,14 @@ public class Pez extends Animal{
 		return listado.length;
 	}
 	
-	public void crearSalmon(String name, int age, String gen) {
+	public static Pez crearSalmon(String name, int age, String gen) {
 		salmones ++;
-		new Pez(name,age,"oceano",gen,"rojo",6);
+		return new Pez(name,age,"oceano",gen,"rojo",6);
 	}
 	
-	public void crearBacalao(String name, int age, String gen) {
+	public static Pez crearBacalao(String name, int age, String gen) {
 		bacalaos ++;
-		new Pez(name,age,"oceano",gen,"gris",6);
+		return new Pez(name,age,"oceano",gen,"gris",6);
 	}
 
 }

@@ -58,14 +58,14 @@ public class Ave extends Animal {
 		return listado.length;
 	}
 	
-	public void crearHalcon(String name, int age, String gen) {
+	public static Ave crearHalcon(String name, int age, String gen) {
 		halcones ++;
-		new Ave(name, age, "montanas", gen, "cafe glorioso");
+		return new Ave(name, age, "montanas", gen, "cafe glorioso");
 	}
 	
-	public void crearAguila(String name, int age, String gen) {
+	public static Ave crearAguila(String name, int age, String gen) {
 		aguilas ++;
-		new Ave(name, age, "montanas", gen, "blanco y amarillo");
+		return new Ave(name, age, "montanas", gen, "blanco y amarillo");
 	}
 	
 }
