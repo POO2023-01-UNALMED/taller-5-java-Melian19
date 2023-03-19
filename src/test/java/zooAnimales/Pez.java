@@ -1,8 +1,9 @@
 package zooAnimales;
+import java.util.ArrayList;
 
 public class Pez extends Animal{
 	
-	private static Pez[] listado;
+	private static ArrayList<Pez> listado = new ArrayList<Pez>();
 	public static int salmones;
 	public static int bacalaos;
 	private String colorEscamas;
@@ -12,12 +13,7 @@ public class Pez extends Animal{
 	
 	public Pez() {
 		setTotalAnimales(getTotalAnimales()+1);
-		Pez[] nuevosAnimales = new Pez[listado.length + 1];
-		nuevosAnimales[0] = this;
-		for (int i = 1; i < nuevosAnimales.length; i++){
-			nuevosAnimales[i] = listado[i-1];
-		}
-		listado = nuevosAnimales;
+		listado.add(this);
 	}
 	public Pez(String name, int age, String lugar, String gen, String color, int cantidad) {
 		setNombre(name);
@@ -26,21 +22,15 @@ public class Pez extends Animal{
 		setGenero(gen);
 		colorEscamas = color;
 		cantidadAletas = cantidad;
-		setTotalAnimales(getTotalAnimales()+1);
-		Pez[] nuevosAnimales = new Pez[listado.length + 1];
-		nuevosAnimales[0] = this;
-		for (int i = 1; i < nuevosAnimales.length; i++){
-			nuevosAnimales[i] = listado[i-1];
-		}
-		listado = nuevosAnimales;
+		listado.add(this);
 	}
 	
 	//metodos get y set
 	
-	public Pez[] getListado() {
+	public ArrayList<Pez> getListado() {
 		return listado;
 	}
-	public void setListado(Pez[] lista) {
+	public void setListado(ArrayList<Pez> lista) {
 		listado = lista;
 	}
 	public String getColorEscamas() {
@@ -63,7 +53,7 @@ public class Pez extends Animal{
 	}
 	
 	public static int cantidadPeces() {
-		return listado.length;
+		return listado.size();
 	}
 	
 	public static Pez crearSalmon(String name, int age, String gen) {

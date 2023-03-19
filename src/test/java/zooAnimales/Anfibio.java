@@ -1,7 +1,8 @@
 package zooAnimales;
+import java.util.ArrayList;
 
 public class Anfibio extends Animal {
-	private static Anfibio[] listado;
+	private static ArrayList<Anfibio> listado = new ArrayList<Anfibio>();
 	public static int ranas;
 	public static int salamandras;
 	private String colorPiel;
@@ -16,31 +17,20 @@ public class Anfibio extends Animal {
 		setGenero(gen);
 		colorPiel = color;
 		venenoso = estado;
-		setTotalAnimales(getTotalAnimales()+1);
-		Anfibio[] nuevosAnimales = new Anfibio[listado.length + 1];
-		nuevosAnimales[0] = this;
-		for (int i = 1; i < nuevosAnimales.length; i++){
-			nuevosAnimales[i] = listado[i-1];
-		}
-		listado = nuevosAnimales;
+		listado.add(this);
 	}
 	public Anfibio(){
 		setTotalAnimales(getTotalAnimales()+1);
-		Anfibio[] nuevosAnimales = new Anfibio[listado.length + 1];
-		nuevosAnimales[0] = this;
-		for (int i = 1; i < nuevosAnimales.length; i++){
-			nuevosAnimales[i] = listado[i-1];
-		}
-		listado = nuevosAnimales;
+		listado.add(this);
 	}
 	
 	//metodos get y set
 	
 
-	public Anfibio[] getListado() {
+	public ArrayList<Anfibio> getListado() {
 		return listado;
 	}
-	public void setListado(Anfibio[] animales) {
+	public void setListado(ArrayList<Anfibio> animales) {
 		listado = animales;
 	}
 	public String getColorPiel() {
@@ -63,7 +53,7 @@ public class Anfibio extends Animal {
 	}
 	
 	public static int cantidadAnfibios() {
-		return listado.length;
+		return listado.size();
 	}
 	
 	public static Anfibio crearRana(String name, int age, String gen) {
